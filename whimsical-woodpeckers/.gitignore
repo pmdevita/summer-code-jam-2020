@@ -1,2 +1,5 @@
 node_modules
 __target__
+.DS_Store
+.env
+db.sqlite3
