@@ -2,6 +2,7 @@ import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 from anon.models import AnonUser
+from pprint import pprint
 
 # Create your views here.
 
@@ -13,8 +14,8 @@ def get_user(user_id):
         return None
 
 def test(request):
-    #return HttpResponse(AnonUser.objects)
-    return HttpResponse(str(request.META))
+    return  AnonUser.objects.get(id=5)
+    #return HttpResponse(str(request.META))
 
 
 

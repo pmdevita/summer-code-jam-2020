@@ -13,9 +13,10 @@ class AnonUserManager(BaseUserManager):
         user.set_password(password)
         user.save()
         return user
+        
 class AnonUser(AbstractBaseUser):
     id = models.AutoField(primary_key=True)
-    nickname = models.CharField(max_length=25, default=namegenerator.gen())
+    nickname = models.CharField(max_length=40, default=namegenerator.gen)
     last_seen = models.DateTimeField(default=timezone.now)
     password = models.CharField(max_length=5, default="abcde")
     objects = AnonUserManager()

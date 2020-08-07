@@ -11,6 +11,7 @@ transcrypt = "*"
 django-crispy-forms = "*"
 pillow = "*"
 namegenerator = "*"
+pprint = "*"
 
 [requires]
 python_version = "3.8"
